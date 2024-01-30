@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..\static\style.css">
+    
+</head>
+<body>
+    <div class="container">
+       
+        <h1>Mental Health Prediction</h1>
+         
+
+         <p>Predict the probability whether the person wants mental health treatment or not</p>
+    </div>
+    <div id="home">
+        <h3>
+            Here are the instructions to fill the form
+        </h3>
+        <ol>
+            
+            <li>For Gender: Enter 0 for male, 1 for female and 2 for transgender</li>
+            <li>For Family History: Enter 0 for No and 1 for Yes</li>
+        </ol>
+    </div>
+    <div class="body">
+        <form action='/predict' method="post" class="col">
+            <div class="row">
+             
+              <div class="box">
+                <label for="last_name"><b>Gender:</b></label>
+                
+                <input id="last_name" name="Gender" placeholder="Gender"  type="text" class="validate">
+              </div>
+              <div class="box">
+                <label for="_name"><b>Family History:</b></label>
+                
+                <input id="_name" name="Family_history" placeholder="Family History" type="text" class="validate">
+              </div>
+            </div>
+            <div class="row center">
+              <button type="submit" class=" orange">Predict Probability</button>
+              <p>{{pred}}</p>
+            </div>
+            
+          </form>
+    </div>
+</body>
+</html>
+
